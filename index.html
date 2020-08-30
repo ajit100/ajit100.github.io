@@ -122,9 +122,14 @@
                     },
                     "retina_detect": true
                     };
+        console.log("loading... : ", particlesJS);
         window.addEventListener("load", function(){
-            // ....
-            particlesJS("particles-js", particleConstant);
+            console.log("window loaded : ", particlesJS);
+            particlesJS.load('particles-js', particleConstant,
+                function() {
+                    console.log('particles.json loaded...');
+                }
+            );
         });
   </script>
 </body>
