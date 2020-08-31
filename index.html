@@ -7,6 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <title>Particles</title>
+    <style>
+        /* ---- reset ---- */
+            body {
+                margin: 0;
+                font:normal 75% Arial, Helvetica, sans-serif;
+            }
+
+            canvas {
+                display: block;
+                vertical-align: bottom;
+            }
+
+            /* ---- particles.js container ---- */
+
+            #particles-js {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #b61924;
+                background-image: url("");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+    </style>
 </head>
 <body>
   <div id="particles-js"></div>
@@ -122,14 +147,8 @@
                     },
                     "retina_detect": true
                     };
-        console.log("loading... : ", particlesJS);
         window.addEventListener("load", function(){
-            console.log("window loaded : ", particlesJS);
-            particlesJS('particles-js', particleConstant,
-                function() {
-                    console.log('particles.json loaded...');
-                }
-            );
+            particlesJS('particles-js', particleConstant);
         });
   </script>
 </body>
